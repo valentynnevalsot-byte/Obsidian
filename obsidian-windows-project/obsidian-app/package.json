@@ -1,0 +1,22 @@
+{
+  "name": "obsidian-desktop",
+  "version": "1.0.0",
+  "description": "OBSIDIAN community chat desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^34.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.obsidian.community",
+    "productName": "OBSIDIAN",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "index.html", "styles.css", "renderer.js", "package.json"],
+    "win": { "target": "nsis" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
